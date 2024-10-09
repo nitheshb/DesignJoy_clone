@@ -67,11 +67,7 @@ const FAQSection = () => {
       <div className="w-2/5 h-[450px] p-10   bg-white shadow-lg ">
  
         <div className="text-center">
-          {/* <Image
-            src={fq} 
-            alt="Smiley face" 
-            className="mx-auto mb-4"
-          /> */}
+ 
 
     <Image src={fq} alt={''}  width={200} height={200} className="mx-auto mb-4" />
 

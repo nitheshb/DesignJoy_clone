@@ -41,10 +41,8 @@ const PortfolioSection = () => {
 
   return (
     <div className="relative max-w-8xl mx-auto px-4 py-16">
-      {/* Decorative Elements */}
       <div className="absolute left-0 top-0">
         <div className=" relative">
-          {/* <div className="w-24 h-24 bg-emerald-400 rounded-l-full border-2 border-black" /> */}
           <Image src={d7} alt={''} width={200} height={200}  />
         </div>
       </div>
@@ -65,12 +63,7 @@ const PortfolioSection = () => {
 
       <div className="absolute right-0 top-0">
         <div className="relative">
-          {/* <div className="w-24 h-12 bg-red-500 rounded-full transform rotate-45">
-            <div className="absolute inset-0 flex flex-col justify-center">
-              <div className="h-1 bg-black mx-2" />
-              <div className="h-1 bg-black mx-2 mt-1" />
-            </div>
-          </div> */}
+  
 
          <Image src={d8} alt={''} width={200} height={200}/>
 
@@ -105,18 +98,7 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Portfolio Grid */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden hover:opacity-90 transition-opacity">
-              <img
-                src={`/api/placeholder/600/600`}
-                alt={`Portfolio item ${i + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div> */}
+
 
         <div className='relative max-w-6xl mx-auto px-4 py-16'>
 
@@ -126,8 +108,8 @@ const PortfolioSection = () => {
           <Image
             src={url}
             alt={`Portfolio item ${i + 1}`}
-            layout="fill" // This ensures the image takes up the entire div area
-            objectFit="cover" // Makes sure the image maintains aspect ratio and fills the container
+            layout="fill"
+            objectFit="cover" 
           />
         </div>
       ))}

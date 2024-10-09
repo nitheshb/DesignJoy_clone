@@ -13,10 +13,10 @@ const DesignjoySectionone = () => {
   return (
           <div className="bg-[#fafafa] rounded-2xl  relative overflow-hidden">
           <><div className="absolute top-4 left-0">
-                  {/* <div className="w-16 h-16 bg-orange-500 rounded-full opacity-80"></div> */}
+             
                   <Image src={s10} alt={''}/>
               </div><div className="absolute top-4 right-0">
-                      {/* <div className="w-16 h-16 border-4 border-blue-500 rounded-full"></div> */}
+            
                   <Image src={s11} alt={''}/>
 
                   </div><div className="text-center max-w-2xl mx-auto pt-16 pb-8">

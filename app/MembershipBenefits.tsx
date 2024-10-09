@@ -75,27 +75,15 @@ export default function MembershipBenefits() {
 
   return (
     <div className="relative w-full max-w-8xl mx-auto px-4 py-16">
-      {/* Decorative Elements */}
+
       <div className="absolute left-0 top-0">
       <Image src={img1} alt={''} width={150} height={150}/>
-        {/* <div className="w-40 h-40 bg-pink-400 transform -rotate-12">
-          <div className="absolute inset-0">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="absolute w-full h-1 bg-black transform rotate-45 translate-y-8" style={{ top: `${i * 12}px` }} />
-            ))}
-          </div>
-        </div> */}
+   
       </div>
 
       <div className="absolute right-0 top-0">
       <Image src={img2} alt={''} width={300} height={300}/>
-        {/* <div className="w-40 h-40 bg-yellow-400 transform rotate-12">
-          <div className="absolute inset-0">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="absolute w-full h-1 bg-black transform -rotate-45 translate-y-8" style={{ top: `${i * 12}px` }} />
-            ))}
-          </div>
-        </div> */}
+    
       </div>
 
 

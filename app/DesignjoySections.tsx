@@ -19,7 +19,7 @@ const DesignjoySections = () => {
       {/* First Section */}
       <div className="bg-[#fafafa] rounded-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0">
-          {/* <div className="w-12 h-12 bg-black rounded-full"></div> */}
+   
           <Image src={s2} alt={''}/>
 
         </div>
@@ -50,15 +50,7 @@ const DesignjoySections = () => {
             <Image src={s8} alt="Freelancer" className="h-6" />
           </div>
         </div>
-{/* 
-        <div className="flex justify-center space-x-4 mt-8">
-          <span className="px-4 py-2 bg-red-500 text-white rounded-full text-sm">Stock decks</span>
-          <span className="px-4 py-2 bg-purple-500 text-white rounded-full text-sm">Workflow</span>
-          <span className="px-4 py-2 bg-blue-500 text-white rounded-full text-sm">Brand guides</span>
-          <span className="px-4 py-2 bg-yellow-500 text-white rounded-full text-sm">Icons</span>
-          <span className="px-4 py-2 bg-emerald-500 text-white rounded-full text-sm">SVG Graphics</span>
-          <span className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm">Social media</span>
-        </div> */}
+
       </div>
 
 

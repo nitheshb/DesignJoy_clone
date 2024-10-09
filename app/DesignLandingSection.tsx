@@ -41,7 +41,7 @@ export default function DesignLandingSection() {
         </div>
       </div>
 
-      {/* Main Content */}
+
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-5xl  text-black font-bold mb-8">
           We didnt reinvent the wheel. Just design.
@@ -51,12 +51,12 @@ export default function DesignLandingSection() {
           <p>Design as you want it just arrived.</p>
         </div>
 
-        {/* Features Grid */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Feature 1 */}
+      
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-emerald-400 rounded-full flex items-center justify-center mb-4">
-              {/* <ArrowPathIcon className="w-12 h-12 text-white" /> */}
+          
 
               
 
@@ -66,7 +66,7 @@ export default function DesignLandingSection() {
             <p className="text-center text-black">Subscribe to a plan & request as many designs as youd like.</p>
           </div>
 
-          {/* Feature 2 */}
+      
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-pink-400 rounded-full flex items-center justify-center mb-4">
               <div className="w-12 h-8 bg-yellow-300 rounded" />
@@ -74,7 +74,7 @@ export default function DesignLandingSection() {
             <p className="text-center text-black">Receive your design within two business days on average.</p>
           </div>
 
-          {/* Feature 3 */}
+      
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-blue-400 rounded-full flex items-center justify-center mb-4">
               <div className="w-12 h-12 border-4 border-white rounded-full" />
@@ -83,7 +83,7 @@ export default function DesignLandingSection() {
           </div>
         </div>
 
-        {/* CTA Button */}
+        
         <button className="bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800 transition-colors">
           See plans
         </button>
