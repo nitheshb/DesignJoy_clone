@@ -6,9 +6,13 @@ import ts2 from './images/ts2.svg'
 import line from './images/line.svg'
 import profile from './images/profile.png'
 
+
+import Button from './Button';
+
+
 export default function TestimonialSection() {
   return (
-    <div className="relative w-full bg-white max-w-8xl mx-auto px-4 py-16">
+    <div className="relative w-full  max-w-8xl mx-auto px-4 py-16">
   
       <div className="absolute left-0 top-20">
         <div className="relative w-40 h-40">
@@ -61,9 +65,9 @@ export default function TestimonialSection() {
           Designjoy replaces unreliable freelancers and expensive agencies for one flat monthly fee, with designs delivered so fast that it will blow your mind.
         </p>
 
-        <button className="bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800 transition-colors mb-16">
+        <Button className='mb-16'>
           See plans
-        </button>
+        </Button>
 
         <div className="grid md:grid-cols-2 gap-12 items-center text-left">
           <div>

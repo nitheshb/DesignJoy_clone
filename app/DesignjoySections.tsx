@@ -12,6 +12,9 @@ import s7 from './images/s7.svg'
 import s8 from './images/s8.svg'
 import s9 from './images/s9.svg'
 
+import Button from './Button';
+
+
 
 const DesignjoySections = () => {
   return (
@@ -34,9 +37,9 @@ const DesignjoySections = () => {
           <p className="text-gray-600 text-2xl mb-8">
             A collection of funky vectorized scribbbles to spice up your design projects.
           </p>
-          <button className="bg-black text-white px-6 py-3 rounded-lg font-medium">
+          <Button>
             Download now
-          </button>
+          </Button>
           <p className="text-sm text-gray-500 mt-6">
             Used by over 30,000 designers & top brands.
           </p>

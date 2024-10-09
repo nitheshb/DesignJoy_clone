@@ -5,6 +5,10 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { Menu, X } from 'lucide-react';
 
+
+import Button from './Button';
+
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -72,7 +76,7 @@ export default function Header() {
         <meta name="description" content="Design subscriptions for everyone. Pause or cancel anytime." />
       </Head>
 
-      <main className="min-h-screen bg-[#FAFAFA] relative overflow-hidden">
+      <main className="min-h-screen  relative overflow-hidden">
         {/* Background dot pattern */}
         <DotGrid />
 
@@ -117,9 +121,9 @@ export default function Header() {
             <p className="text-lg md:text-xl text-gray-600 mb-8">
               Design subscriptions for everyone. Pause or cancel anytime.
             </p>
-            <button className="bg-black text-white rounded-full px-8 py-4 font-medium text-sm hover:bg-gray-800 transition-colors">
+            <Button className="bg-black text-white rounded-full px-8 py-4 font-medium text-sm hover:bg-gray-800 transition-colors">
               See plans
-            </button>
+            </Button>
           </div>
         </div>
 

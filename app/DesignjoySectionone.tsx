@@ -7,11 +7,14 @@ import Image from 'next/image'
 import s10 from './images/s10.svg'
 import s11 from './images/s11.svg'
 
+import Button from './Button';
+
+
 
 
 const DesignjoySectionone = () => {
   return (
-          <div className="bg-[#fafafa] rounded-2xl  relative overflow-hidden">
+          <div className=" rounded-2xl  relative overflow-hidden">
           <><div className="absolute top-4 left-0">
              
                   <Image src={s10} alt={''}/>
@@ -24,9 +27,9 @@ const DesignjoySectionone = () => {
                       <p className="text-gray-600 mb-8">
                           Get a guided tour through Designjoy, and find out how you and your team can change the way you source design, forever.
                       </p>
-                      <button className="bg-black text-white px-6 py-3 rounded-lg font-medium">
+                      <Button>
                           Book a call
-                      </button>
+                      </Button>
                   </div><div className="flex justify-center mt-16">
                       <img src="/api/placeholder/200/60" alt="Designjoy Logo" className="h-12" />
                   </div><div className="flex justify-center space-x-8 mt-16 text-sm text-gray-500">

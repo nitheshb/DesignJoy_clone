@@ -7,11 +7,14 @@ import Image from 'next/image'
 import dic1 from './images/dlc1.svg'
 import dic2 from './images/dlc2.svg'
 
+import Button from './Button';
+
+
 //import { ArrowPathIcon } from 'lucide-react';
 
 export default function DesignLandingSection() {
   return (
-    <div className="relative bg-white w-full max-w-8xl mx-auto  py-16">
+    <div className="relative  w-full max-w-8xl mx-auto  py-16">
       {/* Decorative Images */}
       <div className="absolute left-0 top-0">
         <div className="w-32 h-32 relative">
@@ -84,9 +87,9 @@ export default function DesignLandingSection() {
         </div>
 
         
-        <button className="bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800 transition-colors">
+        <Button>
           See plans
-        </button>
+        </Button>
       </div>
     </div>
   );

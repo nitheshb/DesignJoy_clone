@@ -14,6 +14,9 @@ import fq from './images/fq.png'
 import fqbg from './images/fqbg.svg'
 
 
+import Button from './Button';
+
+
 const FAQSection = () => {
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
@@ -64,7 +67,7 @@ const FAQSection = () => {
         </div>
       </div>
       
-      <div className="w-2/5 h-[450px] p-10   bg-white shadow-lg ">
+      <div className="w-3/5 h-[450px] p-10   bg-white shadow-lg ">
  
         <div className="text-center">
  
@@ -72,9 +75,9 @@ const FAQSection = () => {
     <Image src={fq} alt={''}  width={200} height={200} className="mx-auto mb-4" />
 
           <h2 className="text-3xl   font-bold mb-4">Book a 15-minute <br /> intro call</h2>
-          <button className="bg-black text-white rounded-full px-8 py-3 mb-4">
+          <Button className='mb-4'>
             Schedule now
-          </button>
+          </Button>
           <p className="text-sm">
             Prefer to email?{' '}
             <a href="mailto:hello@designjoy.co" className="text-red-500">

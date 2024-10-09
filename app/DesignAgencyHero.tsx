@@ -2,6 +2,11 @@
  import hero2 from './images/hero2.svg'
 
 
+ import Button from './Button';
+
+
+
+
 
 import { FC } from 'react';
 import Image from 'next/image';
@@ -9,7 +14,7 @@ import Link from 'next/link';
 
 const DesignAgencyHero: FC = () => {
   return (
-    <div className="relative w-full bg-white max-w-8xl mx-auto min-h-screen">
+    <div className="relative w-full  max-w-8xl mx-auto min-h-screen">
     
 
 
@@ -79,9 +84,9 @@ const DesignAgencyHero: FC = () => {
           Design subscriptions for everyone. Pause or cancel anytime.
         </p>
         <div className="mt-10">
-          <button className="bg-black text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors">
+          <Button className="">
             See plans
-          </button>
+          </Button>
         </div>
         <div className="mt-4 flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-red-500"></div>

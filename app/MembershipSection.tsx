@@ -9,6 +9,8 @@
  import Image from 'next/image';
 
 
+ import Button from './Button';
+
 
 
 import { useState } from 'react';
@@ -48,17 +50,9 @@ const MembershipSection = () => {
 
   return (
     <div className="min-h-screen bg-white p-8 relative overflow-hidden">
-      {/* Decorative Elements */}
+
       <div className="absolute top-0 right-0 w-64 h-64">
-        {/* <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path
-            d="M0,50 Q25,25 50,50 T100,50"
-            fill="none"
-            stroke="black"
-            strokeWidth="2"
-            className="animate-draw"
-          />
-        </svg> */}
+
         <Image src={mbg} alt={''}/>
       </div>
       <div className="absolute top-20 right-0">
@@ -66,9 +60,9 @@ const MembershipSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* Left Column - Join Card */}
+ 
         <div className="bg-black rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
-          {/* Mint circle with dots */}
+       
           <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-300 rounded-full opacity-80">
     
 
@@ -104,11 +98,11 @@ const MembershipSection = () => {
           </div>
         </div>
 
-        {/* Right Column - Membership */}
+
         <div>
           <h2 className="text-5xl font-bold mb-8">Membership</h2>
           
-          {/* Plan Toggle */}
+       
           <div className="inline-flex items-center p-1 bg-black rounded-full mb-8">
             <button
               className={`px-6 py-2 rounded-full transition-colors ${
@@ -132,7 +126,7 @@ const MembershipSection = () => {
             </button>
           </div>
 
-          {/* Price */}
+      
           <div className="mb-8">
             <div className="flex items-baseline">
               <span className="text-5xl font-bold">
@@ -147,7 +141,6 @@ const MembershipSection = () => {
 
           <div className="h-px bg-gray-200 my-8" />
 
-          {/* Features */}
           <div className="mb-12">
             <h3 className="text-xl font-semibold mb-6">What's included</h3>
             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
@@ -159,11 +152,11 @@ const MembershipSection = () => {
             </div>
           </div>
 
-          {/* CTA */}
+       
           <div className="flex items-center gap-4">
-            <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors">
+            <Button>
               Get started
-            </button>
+            </Button>
             <span>or</span>
             <a href="#book-call" className="text-black underline hover:text-gray-600">
               book a call
