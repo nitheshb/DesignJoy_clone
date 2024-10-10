@@ -93,17 +93,37 @@ body {
     body {
       @apply bg-background text-foreground;
       background-image: url('./images//bg.svg');
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 100vh;
+      background-color: #f6f2ea;
+      background-position: 0 0, 0 0;
+      background-size: auto, auto;
+      border-radius: 36px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      
+
+
+    
+
+      
+
+
+
+
+      
     }
   
     /* Apply background image in dark theme */
     .dark body {
-      background-image: url('./images/bg.svg');
-      background-size: cover;
-      background-position: center;
+       background-image: url('./images/bg.svg');
+     
+      background-color: #f6f2ea;
+      background-position: 0 0, 0 0;
+      background-size: auto, auto;
+      border-radius: 36px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
     }
   
 
