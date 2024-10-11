@@ -5,6 +5,10 @@ import Image from 'next/image';
 import line from './images/line.svg'
 
 
+import Button from './Button';
+
+
+
 
 import img1 from './images/img1.svg'
 import img2 from './images/img2.svg'

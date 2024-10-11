@@ -40,14 +40,14 @@ const FAQSection = () => {
    
     <div className='relative'>
 
-<div className="flex justify-between gap-20  max-w-4xl mx-auto px-4 py-12">
+<div className="flex justify-between gap-20  max-w-6xl mx-auto px-4 py-12">
       <div className="w-3/5">
-        <h1 className="text-6xl font-bold mb-12">Commonly asked questions</h1>
+        <h1 className="text-6xl font-semibold mb-12">Commonly asked questions</h1>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200">
+            <div key={index} className="">
               <button
-                className="w-full py-4 flex justify-between items-center text-left"
+                className="w-full  flex justify-between items-center text-left"
                 onClick={() => setOpenQuestion(openQuestion === index ? null : index)}
               >
                 <span className="text-lg">{faq.question}</span>
@@ -67,14 +67,14 @@ const FAQSection = () => {
         </div>
       </div>
       
-      <div className="w-3/5 h-[450px] p-10   bg-white shadow-lg ">
+      <div className="w-2/5 h-[450px] p-10  bg-white shadow-lg ">
  
         <div className="text-center">
  
 
-    <Image src={fq} alt={''}  width={200} height={200} className="mx-auto mb-4" />
+    <Image src={fq} alt={''}  width={140} height={200} className="mx-auto mb-4" />
 
-          <h2 className="text-3xl   font-bold mb-4">Book a 15-minute <br /> intro call</h2>
+          <h2 className="text-3xl   font-semibold mb-4">Book a 15-minute <br /> intro call</h2>
           <Button className='mb-4'>
             Schedule now
           </Button>
@@ -88,7 +88,7 @@ const FAQSection = () => {
       </div>
 
 
-      <div className="absolute top-[35%] right-0">
+      <div className="absolute top-[55%] right-0">
           <Image src={fqbg} alt={''}/>
 
         </div>

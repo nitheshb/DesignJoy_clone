@@ -33,11 +33,7 @@ export default function TestimonialSection() {
         </div>
 
 
-        {/* <div className="absolute left-0 top-0 md:top-46">
-        <div className="relative w-24 h-24 md:w-40 md:h-40 lg:w-64 lg:h-64">
-          <Image src={ts1} alt={''} layout="fill" objectFit="contain" />
-        </div>
-      </div> */}
+  
 
 
         <div className="absolute left-0 top-[20%]">
@@ -49,12 +45,7 @@ export default function TestimonialSection() {
   
 
 
-{/* 
-<div className="absolute right-0 top-[20%] ">
-  <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[32rem] lg:h-[32rem]">
-    <Image src={ts2} alt="Right Testimonial Image"  layout="fill"  objectFit="cover"   />
-  </div>
-</div>  */}
+
 
 
 <div className="absolute right-0 top-[25%] ">
@@ -80,16 +71,17 @@ export default function TestimonialSection() {
 
 
 
-        {/* <div className="absolute right-0 top-10 md:top-20">
-        <div className="relative w-24 h-24 md:w-40 md:h-40 lg:w-64 lg:h-64">
-          <Image src={ts2} alt={''} layout="fill" objectFit="contain" />
-        </div>
-      </div> */}
+
 
    
-        <h2 className="text-2xl md:text-4xl font-bold mb-4">
+        <h2 className="text-[54px] leading-[60px] max-w-[550px] mx-auto font-semibold mb-4">
           It's "you'll never go back" better
         </h2>
+
+ 
+
+
+
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
           Designjoy replaces unreliable freelancers and expensive agencies for one flat monthly fee, with designs delivered so fast that it will blow your mind.
         </p>

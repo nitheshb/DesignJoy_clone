@@ -46,10 +46,13 @@ export default function DesignLandingSection() {
 
 
       <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-5xl  text-black font-bold mb-8">
+        {/* <h1 className="text-5xl  text-black font-bold mb-8">
           We didnt reinvent the wheel. Just design.
-        </h1>
-        <div className="text-xl text-black mb-16 space-y-2">
+        </h1> */}
+        <h2 className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8">
+        We didnt reinvent the wheel. Just design.
+        </h2>
+        <div className="text-xl leading-[10px] text-black mb-16 space-y-2">
           <p>Design as you know it is out the door.</p>
           <p>Design as you want it just arrived.</p>
         </div>
