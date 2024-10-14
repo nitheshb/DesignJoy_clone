@@ -14,6 +14,8 @@ import './globals.css';
 import bg from './images/bg.svg'
 import logo from './images/logo.svg'
 import SketchyNavbar from "./SketchyNavbar";
+import ShapesComponent from "./You";
+
 export default function Home() {
   return (
 
@@ -40,6 +42,7 @@ export default function Home() {
           <DesignAgencyHero />
         </div>
         <div className="space-y-16">
+          {/* <ShapesComponent/> */}
           <DesignLandingSection />
           <TestimonialSection />
           <MembershipBenefits />

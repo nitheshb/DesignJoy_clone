@@ -7,6 +7,9 @@ import s11 from './images/s11.svg';
 
 import Button from './Button';
 
+import f1 from './images/f1.svg'
+
+
 const DesignjoySectionone = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center  relative overflow-hidden">
@@ -50,7 +53,8 @@ const DesignjoySectionone = () => {
 
       {/* Logo Image Placeholder */}
       <div className="flex justify-center mt-16">
-        <img src="/api/placeholder/200/60" alt="Designjoy Logo" className="h-12" />
+        <Image src={f1} alt="Designjoy Logo"    width={700}
+            height={700} className="" />
       </div>
 
       {/* Links Section */}

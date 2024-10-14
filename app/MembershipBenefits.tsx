@@ -82,6 +82,7 @@ export default function MembershipBenefits() {
 
       <div className="absolute left-0 top-0">
       <Image src={img1} alt={''} width={150} height={150}/>
+      
    
       </div>
 
