@@ -1,11 +1,8 @@
 "use client"; 
 import Image from 'next/image'
 import Link from 'next/link'
-
  import hero1 from './images/hero1.svg'
  import hero2 from './images/hero2.svg'
-
-
  import hr1 from './images/hr1.svg'
  import hr2 from './images/hr2.svg'
  import hr3 from './images/hr3.svg'
@@ -15,10 +12,26 @@ import Link from 'next/link'
  import hr7 from './images/hr7.svg'
 import Button from './Button';
 
+
+import dot from './images/dot.svg'
+
+
+
+import { ScrollContainer, ScrollPage, Animator, batch, Fade, Move, Sticky } from "react-scroll-motion";
+
+
+
 import './index.css';
-
-
+import Marquee from 'react-fast-marquee';
+import { motion } from 'framer-motion';
 const DesignAgencyHero = () => {
+
+
+
+
+  const scrollAnimation = batch(Fade(), Move(0, 200), Sticky());
+
+
   const companies = [
     { name: 'nectar', logo: hr1 },
     { name: 'beehiiv', logo: hr2 },
@@ -42,6 +55,8 @@ const DesignAgencyHero = () => {
             className="object-contain"
           />
         </div>
+  
+
 
         
         <div className="absolute right-0 top-[30%]">
@@ -57,12 +72,12 @@ const DesignAgencyHero = () => {
 
 
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center relative z-10">
-          <h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center relative z-10">
+          <motion.h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4">
             A design agency
             <br />
             with a twist
-          </h1>
+          </motion.h1>
           
           <p className="mt-6 text-[24px] text-gray-600 max-w-2xl mx-auto">
             Design subscriptions for everyone. Pause or cancel anytime.
@@ -77,76 +92,142 @@ const DesignAgencyHero = () => {
             </Button>
           </div>
 
-          <div className="mt-4 flex items-center justify-center space-x-2">
-            <div className="w-2 h-2 rounded-full bg-red-500"></div>
-            <span className="text-sm text-gray-600">Available now</span>
-          </div>
+      
+
+
+<div className="mt-4 flex items-center justify-center space-x-2">
+  <div className="relative flex items-center justify-center">
+    <span className="relative flex h-3 w-3">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ea552b] opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-[#ea552b]"></span>
+    </span>
+  </div>
+  <span className="text-sm text-gray-600">Available now</span>
+</div>
+
+
+
+
         </div>
 
+{/* <ScrollContainer>
+      <ScrollPage>
+        <Animator animation={scrollAnimation}>
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center relative z-10">
+            <h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4">
+              A design agency
+              <br />
+              with a twist
+            </h1>
+
+            <p className="mt-6 text-[24px] text-gray-600 max-w-2xl mx-auto">
+              Design subscriptions for everyone. Pause or cancel anytime.
+            </p>
+
+            <div className="mt-10">
+              <Button
+                href="#plans"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 transition-colors"
+              >
+                See plans
+              </Button>
+            </div>
+
+            <div className="mt-4 flex items-center justify-center space-x-2">
+              <div className="relative flex items-center justify-center">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ea552b] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#ea552b]"></span>
+                </span>
+              </div>
+              <span className="text-sm text-gray-600">Available now</span>
+            </div>
+          </div>
+        </Animator>
+      </ScrollPage>
+    </ScrollContainer> */}
 
 
-         <div className=" logo-marquee__wrapper max-w-3xl mx-auto  bg-gray-900 rounded-full py-4 px-8">
-         <marquee>
-           <div className="flex  items-center justify-between space-x-8">
-                
+
+
+
+
+
+
+        
+
+
+
+         {/* <div className= " w-[90%]  outline-offset-0 perspective-origin-[50%] transform-origin-[0%] bg-black bg-gradient-to-b from-black to-[#292929] rounded-[1000px] outline outline-1 outline-black max-w-[1300px] mx-auto py-6 overflow-hidden shadow-[1px_9px_12px_rgba(0,0,0,0.31),_0_20px_13px_rgba(0,0,0,0.14),_inset_0_2px_1px_rgba(255,255,255,0.5)]  "> */}
+
+          
+
+         <div className="w-[90%]  mb-10 outline-offset-0 perspective-origin-[50%] transform-origin-[0%]   bg-black bg-gradient-to-b from-black to-[#292929] rounded-[1000px] outline outline-1 outline-black max-w-[1300px] mx-auto py-4 overflow-hidden"
+           style={{
+            outline: '1px solid #000',
+            boxShadow: '1px 9px 12px #0000004f, 0 20px 13px #00000024, inset 0 2px 1px #ffffff80',
+          }}
+         >
+
+
+
+
+
+    
+           <div className="flex  items-center justify-between space-x-4">
+           {/* <Marquee>
                 {companies.map((company, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <div className='font-bold text-[#3E89FF]  mb-2'>.</div>
+                <div key={index} className=" items-center flex ">
+                  <div className='font-bold text-[#3E89FF] block  mb-2'>.</div>
 
                   <Image
                     src={company.logo}
                     alt={company.name}
-                    width={150}
-                    height={70}
+                    width={140}
+                    height={10}
                     className="object-contain"
                   />
                 </div>
               ))}
+
+</Marquee> */}
+    <Marquee pauseOnHover={true} gradient={false} speed={50}>
+      {companies.map((company, index) => (
+        <div key={index} className="flex items-center mx-4">
+          <div className="font-bold  block  mr-2">
+             <Image
+             src={dot}
+                  className="w-3 h-3 object-contain"
+             />
+          </div>
+          <Image
+            src={company.logo}
+            alt={company.name}
+            // width={140}
+            // height={10}
+            // className="object-contain"
+               className="w-32 h-16 object-contain"
+          />
+        </div>
+      ))}
+    </Marquee>
            </div>
-           </marquee>
+
+
+       
+
+
+           
+
+
+
+
+           
+
+
+           
 
         </div> 
-
-
-{/* <div
-      style={{
-        maxWidth: '768px', // Adjust to your needs
-        margin: '0 auto',
-        backgroundColor: '#1F2937', // gray-900
-        borderRadius: '9999px', // rounded-full
-        padding: '16px 32px', // py-4 px-8
-        overflow: 'hidden',
-      }}
-    >
-      <div className="flex marquee" style={{ display: 'flex', width: '100%', animation: 'scroll 15s linear infinite' }}>
-        <div className="flex items-center space-x-8">
-          {companies.map((company, index) => (
-            <div key={index} className="flex items-center space-x-2">
-              <Image
-                src={company.logo}
-                alt={company.name}
-                width={130}
-                height={60}
-                className="h-6 w-auto object-contain"
-              />
-            </div>
-          ))}
-          
-  
-        </div>
-      </div>
-      <style jsx global>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
-    </div> */}
-
       </main>
     </div>
   )

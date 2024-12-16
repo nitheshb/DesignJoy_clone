@@ -5,6 +5,10 @@ import Image from 'next/image';
 import line from './images/line.svg'
 
 
+import { motion, useScroll, useTransform } from "framer-motion";
+
+
+
 import Button from './Button';
 
 
@@ -13,7 +17,11 @@ import Button from './Button';
 import img1 from './images/img1.svg'
 import img2 from './images/img2.svg'
 
+
 export default function MembershipBenefits() {
+
+  // const { scrollY } = useScroll();
+  // const yTransform = useTransform(scrollY, [0, 10], [10, 0]); 
   const benefits = [
     {
       icon: (
@@ -99,12 +107,44 @@ export default function MembershipBenefits() {
 
       {/* Main Content */}
       <div className="max-w-3xl mx-auto text-center pt-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        {/* <motion.h2 className="text-4xl md:text-5xl font-bold mb-4">
           Membership benefits
-        </h2>
-        <p className="text-xl mb-16">
+        </motion.h2>
+        <motion.h1 className="text-xl mb-16">
           Perks so good you'll never need to go anywhere else for your design. Seriously.
-        </p>
+        </motion.h1> */}
+
+
+
+
+<motion.h2
+  className="text-4xl md:text-5xl font-bold mb-4"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true, amount: 0.5 }}
+
+
+
+>
+  Membership benefits
+</motion.h2> 
+<motion.h1
+  className="text-xl mb-16"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true, amount: 0.5 }}
+>
+  Perks so good you'll never need to go anywhere else for your design. Seriously.
+</motion.h1>
+
+
+
+
+
+
+
 
         <div className="grid md:grid-cols-3 gap-12">
           {benefits.map((benefit, index) => (

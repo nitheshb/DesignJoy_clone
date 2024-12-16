@@ -14,7 +14,7 @@ import Button from './Button';
 
 export default function DesignLandingSection() {
   return (
-    <div className="relative  w-full max-w-8xl mx-auto  py-16">
+    <div className="relative  w-full  mx-auto  py-16">
       {/* Decorative Images */}
       <div className="absolute left-0 top-0">
         <div className="w-32 h-32 relative">
@@ -43,6 +43,7 @@ export default function DesignLandingSection() {
           </div>
         </div>
       </div>
+
 
 
       <div className="max-w-3xl mx-auto text-center">
