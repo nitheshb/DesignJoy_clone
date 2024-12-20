@@ -93,7 +93,7 @@ interface ReviewCardProps {
 
 export const MarqueeDemo: React.FC = () => {
   return (
-    <div className="relative my-20 flex h-24  flex-col  items-center justify-center overflow-hidden rounded-lg bg-background">
+    <div className="relative my-20 flex h-24  flex-col  items-center justify-center overflow-hidden rounded-lg ">
       <Marquee pauseOnHover className="[--duration:30s]">
         {reviews.map((review, index) => (
           <ReviewCard key={index} {...review} />

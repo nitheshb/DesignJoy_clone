@@ -13,6 +13,7 @@ import s8 from './images/s8.svg'
 import s9 from './images/s9.svg'
 
 import Button from './Button';
+import { motion } from 'framer-motion';
 
 
 
@@ -20,7 +21,16 @@ const DesignjoySections = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 space-y-8">
       {/* First Section */}
-      <div className="bg-[#fafafa] rounded-2xl relative overflow-hidden">
+
+
+      <motion.div
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+
+<div className="bg-[#fafafa] rounded-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0">
    
           <Image src={s2} alt={''}/>
@@ -55,6 +65,10 @@ const DesignjoySections = () => {
         </div>
 
       </div>
+
+
+          </motion.div>
+
 
 
     </div>

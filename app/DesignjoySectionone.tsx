@@ -8,6 +8,7 @@ import s11 from './images/s11.svg';
 import Button from './Button';
 
 import f1 from './images/f1.svg'
+import { motion } from 'framer-motion';
 
 
 const DesignjoySectionone = () => {
@@ -30,12 +31,13 @@ const DesignjoySectionone = () => {
 
 
 
-
-
-
-
-      {/* Content Section */}
-      <div className="text-center max-w-3xl mx-auto pt-16 pb-8 px-4">
+<motion.div
+               transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+                       <div className="text-center max-w-3xl mx-auto pt-16 pb-8 px-4">
         <h2 className="text-[28px] leading-tight md:text-[54px] md:leading-tight font-semibold mb-4">
           See if Designjoy is right<br />
           for you. (It totally is.)
@@ -51,25 +53,62 @@ const DesignjoySectionone = () => {
         </Button>
       </div>
 
-      {/* Logo Image Placeholder */}
-      <div className="flex justify-center mt-16">
+
+          </motion.div>
+
+
+
+
+                <motion.h1
+              
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
+
+
+                              <div className="flex justify-center mt-16">
         <Image src={f1} alt="Designjoy Logo"    width={700}
             height={700} className="" />
       </div>
+ 
+          
+          
+                    </motion.h1>
 
-      {/* Links Section */}
-      <div className="flex justify-center space-x-4 sm:space-x-8 mt-16 text-sm text-gray-500">
-        <a href="#" className="hover:text-black">Latest projects</a>
-        <a href="#" className="hover:text-black">Pricing</a>
-        <a href="#" className="hover:text-black">Contact</a>
-        <a href="#" className="hover:text-black">Client login</a>
+
+
+        
+
+              <motion.div
+         
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                >
+
+
+<div className="flex justify-center space-x-4 sm:space-x-8 mt-16 text-sm text-gray-500">
+        <a href="#" className="hover:text-black mx-4">Latest projects</a>
+        <a href="#" className="hover:text-black mx-4">Pricing</a>
+        <a href="#" className="hover:text-black mx-4">Contact</a>
+        <a href="#" className="hover:text-black mx-4">Client login</a>
       </div>
 
       <div className="flex justify-center space-x-4 sm:space-x-8 mt-4 text-sm text-gray-500">
-        <a href="#" className="hover:text-black">Get started</a>
-        <a href="#" className="hover:text-black">Terms & conditions</a>
-        <a href="#" className="hover:text-black">Privacy policy</a>
+        <a href="#" className="hover:text-black mx-4">Get started</a>
+        <a href="#" className="hover:text-black mx-4">Terms & conditions</a>
+        <a href="#" className="hover:text-black mx-4">Privacy policy</a>
       </div>
+                       
+        
+        
+                  </motion.div>
+        
+
+ 
     </div>
   );
 };

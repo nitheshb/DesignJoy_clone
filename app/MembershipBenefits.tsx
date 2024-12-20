@@ -41,7 +41,7 @@ export default function MembershipBenefits() {
     {
       icon: (
         <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-          <div className="w-8 h-8 text-white">⚡️</div>
+          <div className="w-8 h-8 text-white">0</div>
         </div>
       ),
       title: "Lightning fast delivery",
@@ -50,7 +50,7 @@ export default function MembershipBenefits() {
     {
       icon: (
         <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-          <div className="w-8 h-8 text-white">💰</div>
+          <div className="w-8 h-8 text-white">o</div>
         </div>
       ),
       title: "Fixed monthly rate",
@@ -59,7 +59,7 @@ export default function MembershipBenefits() {
     {
       icon: (
         <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center">
-          <div className="w-8 h-8 text-white">✓</div>
+          <div className="w-8 h-8 text-white">o</div>
         </div>
       ),
       title: "Top-notch quality",
@@ -68,7 +68,7 @@ export default function MembershipBenefits() {
     {
       icon: (
         <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-          <div className="w-8 h-8 text-black">↔️</div>
+          <div className="w-8 h-8 text-black">o</div>
         </div>
       ),
       title: "Flexible and scalable",
@@ -77,7 +77,7 @@ export default function MembershipBenefits() {
     {
       icon: (
         <div className="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center">
-          <div className="w-8 h-8 text-white">🎨</div>
+          <div className="w-8 h-8 text-white">0</div>
         </div>
       ),
       title: "Unique and all yours",
@@ -101,9 +101,25 @@ export default function MembershipBenefits() {
 
 
 
-      <div className='flex items-center justify-center mb-8'>
+      <motion.div
+className='flex items-center justify-center mb-8'
+  transition={{ duration: 1, ease: "easeInOut" }}
+  initial={{ opacity: 0, y: -50 }} 
+  whileInView={{ opacity: 1, y: 0 }} 
+  viewport={{ once: true, amount: 0.5 }}
+>
+
+<Image src={line} alt={''}   />
+
+
+</motion.div>
+
+
+
+
+      {/* <div className='flex items-center justify-center mb-8'>
         <Image src={line} alt={''}   />
-        </div>
+        </div> */}
 
       {/* Main Content */}
       <div className="max-w-3xl mx-auto text-center pt-20">
@@ -144,9 +160,14 @@ export default function MembershipBenefits() {
 
 
 
+<motion.div
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
 
-
-        <div className="grid md:grid-cols-3 gap-12">
+<div className="grid md:grid-cols-3 gap-12">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="mb-4">{benefit.icon}</div>
@@ -155,6 +176,14 @@ export default function MembershipBenefits() {
             </div>
           ))}
         </div>
+
+
+          </motion.div>
+
+
+
+
+
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import fqbg from './images/fqbg.svg'
 
 
 import Button from './Button';
+import { motion } from 'framer-motion';
 
 
 const FAQSection = () => {
@@ -39,6 +40,16 @@ const FAQSection = () => {
   return (
    
     <div className='relative'>
+
+
+
+<motion.div
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+
 
 <div className="flex justify-between gap-20  max-w-6xl mx-auto px-4 py-12">
       <div className="w-3/5">
@@ -93,6 +104,11 @@ const FAQSection = () => {
 
         </div>
     </div>
+
+
+          </motion.div>
+
+
 
     </div>
 

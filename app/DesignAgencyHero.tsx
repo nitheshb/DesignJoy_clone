@@ -72,27 +72,66 @@ const DesignAgencyHero = () => {
 
 
 
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center relative z-10">
-          <motion.h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4">
+
+
+        <motion.h2
+          className=""
+        
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+
+<div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center relative z-10">
+          <h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4">
             A design agency
             <br />
             with a twist
-          </motion.h1>
+          </h1>
           
           <p className="mt-6 text-[24px] text-gray-600 max-w-2xl mx-auto">
             Design subscriptions for everyone. Pause or cancel anytime.
           </p>
 
-          <div className="mt-10">
-            <Button
+          <motion.h2/>
+
+
+
+          <motion.div
+      className="mt-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.5 }}
+    >
+
+<Button
               href="#plans"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 transition-colors"
             >
               See plans
             </Button>
-          </div>
+    </motion.div>
 
-      
+
+
+
+           
+
+          
+
+
+
+
+            
+
+          
+    <motion.div
+    
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 1 }}
+    >
 
 
 <div className="mt-4 flex items-center justify-center space-x-2">
@@ -105,10 +144,26 @@ const DesignAgencyHero = () => {
   <span className="text-sm text-gray-600">Available now</span>
 </div>
 
+</motion.div>
+      
+
+
+
+
 
 
 
         </div>
+          
+        </motion.h2>
+
+           
+
+
+
+
+
+    
 
 {/* <ScrollContainer>
       <ScrollPage>

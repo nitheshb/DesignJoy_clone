@@ -22,6 +22,7 @@ import { products } from "@/lib/constant";
 
 
 import { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 export default function Home() {
 
@@ -101,11 +102,15 @@ export default function Home() {
       /> */}
 
 
-         
+<motion.div
+          transition={{ duration: 1,  ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+        >
 
-  
-       
 
+          
       <section className="relative">
 
 {/* <div 
@@ -223,6 +228,16 @@ export default function Home() {
 
         <HeroParallax products={products}></HeroParallax>
       </section>
+
+
+
+          </motion.div>
+
+
+         
+
+  
+       
 
 
 

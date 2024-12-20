@@ -21,6 +21,7 @@ import line from './images/line.svg'
 import m1 from './images/m1.svg'
 import m2 from './images/m2.svg'
 import m3 from './images/m3.svg'
+import { motion } from 'framer-motion';
 
 
 const imageUrls = [d1, d2, d3, d4, d5, d6];
@@ -50,10 +51,26 @@ const PortfolioSection = () => {
       </div>
 
 
-      
+{/*       
       <div className='flex items-center justify-center '>
         <Image src={line} alt={''}   />
-        </div>
+        </div> */}
+
+
+        <motion.div
+className='flex items-center justify-center '
+  transition={{ duration: 1, ease: "easeInOut" }}
+  initial={{ opacity: 0, y: -50 }} 
+  whileInView={{ opacity: 1, y: 0 }} 
+  viewport={{ once: true, amount: 0.5 }}
+>
+
+<Image src={line} alt={''}   />
+
+
+
+</motion.div>
+
 
 
 
@@ -84,12 +101,37 @@ const PortfolioSection = () => {
 
     
       <div className="text-center pt-20">
-        <h1 className="text-5xl md:text-6xl font-bold mb-12">
-          Apps, websites,<br />logos & more
-        </h1>
 
-        
-        <div className="flex   max-w-2xl mx-auto flex-wrap justify-center gap-2 mb-16">
+
+      <motion.h1
+      className="text-5xl md:text-6xl font-bold mb-12"
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+                    Apps, websites,<br />logos & more
+
+
+          </motion.h1>
+
+
+
+        {/* <h1 className="text-5xl md:text-6xl font-bold mb-12">
+          Apps, websites,<br />logos & more
+        </h1> */}
+
+
+
+<motion.div
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+
+
+<div className="flex   max-w-2xl mx-auto flex-wrap justify-center  gap-2 mb-16">
           {categories.map((category, index) => (
             <span
               key={index}
@@ -101,30 +143,86 @@ const PortfolioSection = () => {
         </div>
 
 
+          </motion.div>
 
-        <div className='relative max-w-6xl mx-auto px-4 py-16'>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-      {imageUrls.map((url, i) => (
-        <div key={i} className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden hover:opacity-90 transition-opacity">
-          <Image
-            src={url}
-            alt={`Portfolio item ${i + 1}`}
-            layout="fill"
-            objectFit="cover" 
-          />
-        </div>
-      ))}
-    </div>
-
-        </div>
+        
 
 
 
 
+  
+
+
+
+
+
+
+
+          <div className='relative max-w-6xl mx-auto px-4 py-16'>
+
+
+
+
+
+
+          <motion.div
+          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+
+
+
+          
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+{imageUrls.map((url, i) => (
+<div key={i} className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden hover:opacity-90 transition-opacity">
+  <Image
+    src={url}
+    alt={`Portfolio item ${i + 1}`}
+    layout="fill"
+    objectFit="cover" 
+  />
+</div>
+))}
+</div>
+
+
+
+
+
+
+          </motion.div>
+
+
+</div>
+
+
+
+<motion.div
+          transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          
+        >
+
+
+<Button>
+See more work
+
+        </Button>
+
+
+</motion.div>
+
+        
+
+{/* 
         <Button>
           See more work
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

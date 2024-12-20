@@ -8,6 +8,7 @@ import dic1 from './images/dlc1.svg'
 import dic2 from './images/dlc2.svg'
 
 import Button from './Button';
+import { motion } from 'framer-motion';
 
 
 //import { ArrowPathIcon } from 'lucide-react';
@@ -50,50 +51,116 @@ export default function DesignLandingSection() {
         {/* <h1 className="text-5xl  text-black font-bold mb-8">
           We didnt reinvent the wheel. Just design.
         </h1> */}
-        <h2 className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8">
+        {/* <h2 className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8">
         We didnt reinvent the wheel. Just design.
-        </h2>
-        <div className="text-xl leading-[10px] text-black mb-16 space-y-2">
+        </h2> */}
+
+<motion.h2
+  className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8"
+
+  transition={{ duration: 1, ease: "easeInOut" }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.5 }}
+>
+  We didn’t reinvent the wheel. Just design.
+</motion.h2>
+
+
+
+
+
+
+<motion.div
+  className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8"
+
+  transition={{ duration: 1, ease: "easeInOut" }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.5 }}
+
+
+>
+
+<div className="text-xl leading-[10px] text-black mb-16 space-y-2">
           <p>Design as you know it is out the door.</p>
           <p>Design as you want it just arrived.</p>
         </div>
 
+</motion.div>
+
+
+
+
+<motion.div
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
       
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div className="flex flex-col items-center">
+        <div className="w-24 h-24 bg-emerald-400 rounded-full flex items-center justify-center mb-4">
       
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 bg-emerald-400 rounded-full flex items-center justify-center mb-4">
+
           
 
-              
-
-              
-              
-            </div>
-            <p className="text-center text-black">Subscribe to a plan & request as many designs as youd like.</p>
-          </div>
-
-      
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 bg-pink-400 rounded-full flex items-center justify-center mb-4">
-              <div className="w-12 h-8 bg-yellow-300 rounded" />
-            </div>
-            <p className="text-center text-black">Receive your design within two business days on average.</p>
-          </div>
-
-      
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 bg-blue-400 rounded-full flex items-center justify-center mb-4">
-              <div className="w-12 h-12 border-4 border-white rounded-full" />
-            </div>
-            <p className="text-center text-black">Well revise the designs until youre 100% satisfied.</p>
-          </div>
+          
+          
         </div>
+        <p className="text-center text-black">Subscribe to a plan & request as many designs as youd like.</p>
+      </div>
 
-        
-        <Button>
+  
+      <div className="flex flex-col items-center">
+        <div className="w-24 h-24 bg-pink-400 rounded-full flex items-center justify-center mb-4">
+          <div className="w-12 h-8 bg-yellow-300 rounded" />
+        </div>
+        <p className="text-center text-black">Receive your design within two business days on average.</p>
+      </div>
+
+  
+      <div className="flex flex-col items-center">
+        <div className="w-24 h-24 bg-blue-400 rounded-full flex items-center justify-center mb-4">
+          <div className="w-12 h-12 border-4 border-white rounded-full" />
+        </div>
+        <p className="text-center text-black">Well revise the designs until youre 100% satisfied.</p>
+      </div>
+    </div>
+
+
+          </motion.div>
+
+
+
+
+          <motion.div
+          transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          
+        >
+
+
+<Button>
           See plans
         </Button>
+
+
+          </motion.div>
+
+
+
+
+         
+      
+
+
+        
+
       </div>
     </div>
   );
