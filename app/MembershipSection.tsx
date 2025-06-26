@@ -125,7 +125,7 @@ const MembershipSection = () => {
             </button>
           </div>
 
-          <div className="mb-8 z-10 relative">
+          {/* <div className="mb-8 z-10 relative">
             <div className="flex items-baseline">
               <span className="text-5xl font-bold">
                 ${plans[selectedPlan].price}
@@ -148,7 +148,7 @@ const MembershipSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-4 z-10 relative">
             <Button>Get started</Button>
