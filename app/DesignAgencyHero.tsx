@@ -109,7 +109,7 @@ const DesignAgencyHero = () => {
     >
 
 <Button
-              href="#plans"
+              // href="#plans"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 transition-colors"
             >
               Call: +91 9849000525
@@ -254,6 +254,7 @@ const DesignAgencyHero = () => {
         <div key={index} className="flex items-center mx-">
           <div className="font-bold  block  mr-2">
              <Image
+             alt={'t'}
              src={dot}
                   className="w-3 h-3 object-contain"
              />
