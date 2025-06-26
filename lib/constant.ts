@@ -24,28 +24,28 @@ export const products = [
   },
   {
     title: 'Cursor',
-    link: 'https://cursor.so',
+    link: 'https://finance-map.vercel.app/',
     thumbnail: '/scrollp2.png',
   },
   {
     title: 'Rogue',
-    link: 'https://userogue.com',
+    link: 'https://just-exhibit-v1.vercel.app/',
     thumbnail: '/scrollp3.png',
   },
 
   {
     title: 'Editorially',
-    link: 'https://editorially.org',
+    link: 'https://vector-ai-poc-v1.vercel.app/',
     thumbnail: '/scrollp4.png',
   },
   {
     title: 'Editrix AI',
-    link: 'https://editrix.ai',
+    link: 'https://kaggle-clone-xi.vercel.app/',
     thumbnail: '/scrollp5.png',
   },
   {
     title: 'Pixel Perfect',
-    link: 'https://app.pixelperfect.quest',
+    link: 'https://ai-resume-builder-seven-omega.vercel.app/',
     thumbnail: '/scrollp1.png',
   },
 

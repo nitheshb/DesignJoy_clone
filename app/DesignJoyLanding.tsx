@@ -29,17 +29,17 @@ const imageUrls = [d1, d2, d3, d4, d5, d6];
 
 const PortfolioSection = () => {
   const categories = [
-    { name: 'Landing pages', color: 'bg-pink-400' },
+    { name: 'Enterprise Applications', color: 'bg-pink-400' },
     { name: 'Mobile apps', color: 'bg-blue-500' },
-    { name: 'Logos', color: 'bg-emerald-400' },
+    { name: 'Devops', color: 'bg-emerald-400' },
     { name: 'Branding', color: 'bg-yellow-400' },
-    { name: 'Slide Decks', color: 'bg-red-500' },
-    { name: 'Webflow', color: 'bg-purple-600' },
-    { name: 'Social media', color: 'bg-red-500' },
-    { name: 'Icons', color: 'bg-yellow-400' },
-    { name: 'Brand Guides', color: 'bg-blue-500' },
-    { name: 'Blog Graphics', color: 'bg-emerald-400' },
-    { name: '+ more', color: 'bg-black' },
+    { name: 'UI/UX', color: 'bg-red-500' },
+    { name: 'AI-AGENTS', color: 'bg-purple-600' },
+    { name: 'Automation', color: 'bg-red-500' },
+    { name: 'Workflows', color: 'bg-yellow-400' },
+    { name: 'MCP Servers', color: 'bg-blue-500' },
+    { name: 'Chatbots', color: 'bg-emerald-400' },
+    { name: '+ more', color: 'bg-white' },
   ];
 
   return (
@@ -110,7 +110,7 @@ className='flex items-center justify-center '
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-                    Apps, websites,<br />logos & more
+                    Apps, websites,ERP,<br />MCP & more
 
 
           </motion.h1>

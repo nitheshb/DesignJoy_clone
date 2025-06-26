@@ -3,13 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
  import hero1 from './images/hero1.svg'
  import hero2 from './images/hero2.svg'
- import hr1 from './images/hr1.svg'
- import hr2 from './images/hr2.svg'
- import hr3 from './images/hr3.svg'
- import hr4 from './images/hr4.svg'
- import hr5 from './images/hr5.svg'
- import hr6 from './images/hr6.svg'
- import hr7 from './images/hr7.svg'
+ import hr1 from './images/AWS.svg'
+ import hr2 from './images/Azure.svg'
+ import hr3 from './images/Figma.svg'
+ import hr4 from './images/Flutter.svg'
+ import hr5 from './images/Go.svg'
+ import hr6 from './images/Docker.svg'
+ import hr7 from './images/React.svg'
+ import hr8 from './images/Redis.svg'
+
 import Button from './Button';
 
 
@@ -33,13 +35,14 @@ const DesignAgencyHero = () => {
 
 
   const companies = [
-    { name: 'nectar', logo: hr1 },
-    { name: 'beehiiv', logo: hr2 },
-    { name: 'Memberstack', logo: hr3 },
-    { name: 'cometchat', logo: hr4 },
-    { name: 'Buy me a coffee', logo: hr5, },
-    { name: 'Buy me a coffee', logo: hr6, },
-    { name: 'Buy me a coffee', logo: hr7, },
+    { name: 'AWS', logo: hr1 },
+    { name: 'Azure', logo: hr2 },
+    { name: 'Figma', logo: hr3 },
+    { name: 'Flutter', logo: hr4 },
+    { name: 'GO', logo: hr5, },
+    { name: 'Docker', logo: hr6, },
+    { name: 'React', logo: hr7, },
+    { name: 'Redis', logo: hr8, },
   ]
 
   return (
@@ -84,14 +87,14 @@ const DesignAgencyHero = () => {
         >
 
 <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 text-center relative z-10">
-          <h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4">
-            A design agency
+          <h1 className="text-[100px] leading-[80px] max-w-3xl mx-auto font-semibold mb-4 text-[72px]">
+           A Smart software building agency
             <br />
-            with a twist
+            with user empathy
           </h1>
           
           <p className="mt-6 text-[24px] text-gray-600 max-w-2xl mx-auto">
-            Design subscriptions for everyone. Pause or cancel anytime.
+            Smart software. Sharp design
           </p>
 
           <motion.h2/>
@@ -109,7 +112,7 @@ const DesignAgencyHero = () => {
               href="#plans"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 transition-colors"
             >
-              See plans
+              Call: +91 9849000525
             </Button>
     </motion.div>
 
@@ -141,7 +144,7 @@ const DesignAgencyHero = () => {
       <span className="relative inline-flex rounded-full h-3 w-3 bg-[#ea552b]"></span>
     </span>
   </div>
-  <span className="text-sm text-gray-600">Available now</span>
+  <span className="text-sm text-gray-600">AI Centric</span>
 </div>
 
 </motion.div>
@@ -217,7 +220,7 @@ const DesignAgencyHero = () => {
 
           
 
-         <div className="w-[90%]  mb-10 outline-offset-0 perspective-origin-[50%] transform-origin-[0%]   bg-black bg-gradient-to-b from-black to-[#292929] rounded-[1000px] outline outline-1 outline-black max-w-[1300px] mx-auto py-4 overflow-hidden"
+         <div className="w-[90%]  mb-10 outline-offset-0 perspective-origin-[50%] transform-origin-[0%]   bg-black bg-gradient-to-b from-black to-[#292929] rounded-[1000px] outline outline-1 outline-black max-w-[1300px] mx-auto py-2 overflow-hidden"
            style={{
             outline: '1px solid #000',
             boxShadow: '1px 9px 12px #0000004f, 0 20px 13px #00000024, inset 0 2px 1px #ffffff80',
@@ -229,7 +232,7 @@ const DesignAgencyHero = () => {
 
 
     
-           <div className="flex  items-center justify-between space-x-4">
+           <div className="flex  items-center justify-between space-x-">
            {/* <Marquee>
                 {companies.map((company, index) => (
                 <div key={index} className=" items-center flex ">
@@ -248,7 +251,7 @@ const DesignAgencyHero = () => {
 </Marquee> */}
     <Marquee pauseOnHover={true} gradient={false} speed={50}>
       {companies.map((company, index) => (
-        <div key={index} className="flex items-center mx-4">
+        <div key={index} className="flex items-center mx-">
           <div className="font-bold  block  mr-2">
              <Image
              src={dot}
@@ -261,8 +264,9 @@ const DesignAgencyHero = () => {
             // width={140}
             // height={10}
             // className="object-contain"
-               className="w-32 h-16 object-contain"
+               className="w-20 h-10 object-contain"
           />
+          <span className="w-32 h-16 text-white text-xl font-bold pt-4">{company.name}</span>
         </div>
       ))}
     </Marquee>

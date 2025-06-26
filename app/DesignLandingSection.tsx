@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 
 export default function DesignLandingSection() {
   return (
-    <div className="relative  w-full  mx-auto  py-16">
+    <div className="relative  w-full  mx-auto  py-16 pt-0">
       {/* Decorative Images */}
       <div className="absolute left-0 top-0">
         <div className="w-32 h-32 relative">
@@ -63,7 +63,7 @@ export default function DesignLandingSection() {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, amount: 0.5 }}
 >
-  We didn’t reinvent the wheel. Just design.
+  Every thing you need to build your product, all in one place.
 </motion.h2>
 
 
@@ -82,7 +82,7 @@ export default function DesignLandingSection() {
 
 >
 
-<div className="text-xl leading-[10px] text-black mb-16 space-y-2">
+<div className="text-xl leading-[10px] text-black mb-16 space-y-5">
           <p>Design as you know it is out the door.</p>
           <p>Design as you want it just arrived.</p>
         </div>
@@ -105,12 +105,13 @@ export default function DesignLandingSection() {
         <div className="w-24 h-24 bg-emerald-400 rounded-full flex items-center justify-center mb-4">
       
 
-          
+        <div className="w-12 h-8 bg-gray-300 triangle triangle-t" />
 
           
           
         </div>
-        <p className="text-center text-black">Subscribe to a plan & request as many designs as youd like.</p>
+        <h3 className="text-center text-black text-[26px] font-semibold">Design.</h3>
+        <p className="text-center text-black">Ensuring it is simple and easy to use.</p>
       </div>
 
   
@@ -118,7 +119,9 @@ export default function DesignLandingSection() {
         <div className="w-24 h-24 bg-pink-400 rounded-full flex items-center justify-center mb-4">
           <div className="w-12 h-8 bg-yellow-300 rounded" />
         </div>
-        <p className="text-center text-black">Receive your design within two business days on average.</p>
+
+        <h3 className="text-center text-black text-[26px] font-semibold">Build.</h3>
+        <p className="text-center text-black">Stable build with wrapping speed delivery</p>
       </div>
 
   
@@ -126,7 +129,8 @@ export default function DesignLandingSection() {
         <div className="w-24 h-24 bg-blue-400 rounded-full flex items-center justify-center mb-4">
           <div className="w-12 h-12 border-4 border-white rounded-full" />
         </div>
-        <p className="text-center text-black">Well revise the designs until youre 100% satisfied.</p>
+        <h3 className="text-center text-black text-[26px] font-semibold">Launch.</h3>
+        <p className="text-center text-black">Audience, beta users and iterate.</p>
       </div>
     </div>
 
@@ -145,11 +149,9 @@ export default function DesignLandingSection() {
         >
 
 
-<Button>
-          See plans
-        </Button>
-
-
+      <Button>
+                Call: +91 9849000525
+              </Button>
           </motion.div>
 
 

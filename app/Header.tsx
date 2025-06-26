@@ -1,13 +1,10 @@
 "use client";
 
+import { useState } from "react";
+import Head from "next/head";
+import { Menu, X } from "lucide-react";
 
-import { useState } from 'react';
-import Head from 'next/head';
-import { Menu, X } from 'lucide-react';
-
-
-import Button from './Button';
-
+import Button from "./Button";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,51 +12,58 @@ export default function Header() {
   // Generate dot grid pattern
   const DotGrid = () => (
     <div className="absolute inset-0 -z-10">
-      <div className="absolute inset-0" style={{
-        backgroundImage: `
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `
           radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.1) 1px, transparent 0)
         `,
-        backgroundSize: '24px 24px',
-      }} />
+          backgroundSize: "24px 24px",
+        }}
+      />
     </div>
   );
 
   // Geometric shape component
-  const GeometricShape = ({ position, color }: { 
-    position: 'left' | 'right', 
-    color: 'red' | 'blue' 
+  const GeometricShape = ({
+    position,
+    color,
+  }: {
+    position: "left" | "right";
+    color: "red" | "blue";
   }) => {
     const baseClasses = "absolute w-64 h-64";
-    const positionClasses = position === 'left' 
-      ? "left-4 lg:left-20 top-40" 
-      : "right-4 lg:right-20 bottom-20";
-    const shapeColor = color === 'red' ? "rgb(239 68 68)" : "rgb(59 130 246)";
+    const positionClasses =
+      position === "left"
+        ? "left-4 lg:left-20 top-40"
+        : "right-4 lg:right-20 bottom-20";
+    const shapeColor = color === "red" ? "rgb(239 68 68)" : "rgb(59 130 246)";
 
     return (
       <div className={`${baseClasses} ${positionClasses}`}>
         {/* Solid shape */}
-        <div 
+        <div
           className="absolute inset-0 rounded-full opacity-20"
           style={{ backgroundColor: shapeColor }}
         />
         {/* Border shape */}
-        <div 
+        <div
           className="absolute inset-0 rounded-full"
-          style={{ 
+          style={{
             border: `1.5px solid ${shapeColor}`,
             opacity: 0.3,
-            transform: `rotate(${position === 'left' ? '-45deg' : '45deg'})`
+            transform: `rotate(${position === "left" ? "-45deg" : "45deg"})`,
           }}
         />
         {/* Additional geometric patterns */}
-        {position === 'left' && (
+        {position === "left" && (
           <div className="absolute -top-8 -left-8">
             {[...Array(12)].map((_, i) => (
               <div
                 key={i}
                 className="absolute w-1.5 h-1.5 bg-black/20 rounded-full"
                 style={{
-                  transform: `rotate(${i * 30}deg) translateY(-12px)`
+                  transform: `rotate(${i * 30}deg) translateY(-12px)`,
                 }}
               />
             ))}
@@ -72,8 +76,11 @@ export default function Header() {
   return (
     <>
       <Head>
-        <title>Designjoy™ | Design Agency with a Twist</title>
-        <meta name="description" content="Design subscriptions for everyone. Pause or cancel anytime." />
+        <title>C&C™ | Design Agency with a Twist</title>
+        <meta
+          name="description"
+          content="Design subscriptions for everyone. Pause or cancel anytime."
+        />
       </Head>
 
       <main className="min-h-screen  relative overflow-hidden">
@@ -86,7 +93,7 @@ export default function Header() {
             <svg viewBox="0 0 24 24" className="w-6 h-6">
               <circle cx="12" cy="12" r="12" className="fill-black" />
             </svg>
-            <span className="font-medium text-sm">Designjoy™</span>
+            <span className="font-medium text-sm">C&C™</span>
           </div>
         </div>
 
@@ -116,7 +123,9 @@ export default function Header() {
           {/* Hero Content */}
           <div className="max-w-screen-xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-medium mb-6 tracking-tight">
-              A design agency<br />with a twist
+              A design agency
+              <br />
+              with a twist
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8">
               Design subscriptions for everyone. Pause or cancel anytime.
@@ -145,7 +154,7 @@ export default function Header() {
 
               {/* Mobile Navigation Button */}
               <div className="md:hidden flex items-center justify-between">
-                <button 
+                <button
                   className="text-white p-2"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
@@ -180,8 +189,14 @@ export default function Header() {
 }
 
 // Navigation Link Components
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a 
+const NavLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <a
     href={href}
     className="text-sm text-white/90 hover:text-white transition-colors"
   >
@@ -189,8 +204,14 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   </a>
 );
 
-const MobileNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a 
+const MobileNavLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <a
     href={href}
     className="text-sm text-white/90 hover:text-white transition-colors block px-2 py-1"
   >

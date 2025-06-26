@@ -92,7 +92,7 @@ const FAQSection = () => {
           <p className="text-sm">
             Prefer to email?{' '}
             <a href="mailto:hello@designjoy.co" className="text-red-500">
-              hello@designjoy.co
+              hello@carboncodes.co
             </a>
           </p>
         </div>

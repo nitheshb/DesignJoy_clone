@@ -50,11 +50,12 @@ export default function Home() {
     <div className="min-h-screen w-full overflow-x-hidden">
       {/* Logo */}
       <div className="flex justify-center p-4">
-        <Image 
+        {/* <Image 
           src={logo} 
           alt="logo" 
           className="w-[132px] h-[22px]" 
-        />
+        /> */}
+        <span className="font-bold text-xl "> Carbon & Codes Innovations</span>
 
 
         
@@ -84,7 +85,7 @@ export default function Home() {
         {/* Content Container */}
         <div className=" mx-auto px-4 sm:px-6 xl:px-0">
           {/* Navbar */}
-          <SketchyNavbar />
+          {/* <SketchyNavbar /> */}
 
           {/* Hero Section */}
           <div className="mb-8 md:mb-12 lg:mb-16">
@@ -92,7 +93,7 @@ export default function Home() {
           </div>
 
           {/* Sections Container */}
-          <div className="space-y-12 md:space-y-16 lg:space-y-20">
+          <div className="space-y-1">
 
          {/* <InfiniteMovingCards
         className="md:mt-[18rem] mt-[-100px]"
@@ -248,15 +249,15 @@ export default function Home() {
       
 
             <DesignLandingSection />
-            <TestimonialSection />
-            <MembershipBenefits />
+            {/* <TestimonialSection /> */}
+            {/* <MembershipBenefits /> */}
             <DesignJoyLanding />
-            <MembershipSection />
-            <FAQSection />
+            {/* <MembershipSection /> */}
+            {/* <FAQSection /> */}
             <DesignjoySections />
-            <MarqueeDemo />
-            <DesignjoySectionone />
-            <LampComponent />
+            {/* <MarqueeDemo /> */}
+            {/* <DesignjoySectionone /> */}
+            {/* <LampComponent /> */}
           </div>
         </div>
       </div>
