@@ -1,168 +1,116 @@
+"use client";
 
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Paintbrush, Code, Rocket } from "lucide-react";
 
-
-import React from 'react';
-import Image from 'next/image'
-
-import dic1 from './images/dlc1.svg'
-import dic2 from './images/dlc2.svg'
-
-import Button from './Button';
-import { motion } from 'framer-motion';
-
-
-//import { ArrowPathIcon } from 'lucide-react';
+import dic1 from "./images/dlc1.svg";
+import dic2 from "./images/dlc2.svg";
+import Button from "./Button";
 
 export default function DesignLandingSection() {
+  const steps = [
+    {
+      title: "Design.",
+      description: "Ensuring it is simple and easy to use.",
+      image:
+        "https://cdn.prod.website-files.com/5837424ae11409586f837994/678566be2e0d80a12b14b201_Group%201171274549.jpg",
+      icon: Paintbrush,
+    },
+    {
+      title: "Build.",
+      description: "Stable build with wrapping speed delivery.",
+      image:
+        "https://cdn.prod.website-files.com/5837424ae11409586f837994/678566be2ee6c9d4759c837e_Group%201171274550.jpg",
+      icon: Code,
+    },
+    {
+      title: "Launch.",
+      description: "Audience, beta users and iterate.",
+      image:
+        "https://cdn.prod.website-files.com/5837424ae11409586f837994/678566bffa49c6b76cccbe18_Group%201171274548.jpg",
+      icon: Rocket,
+    },
+  ];
+
   return (
-    <div className="relative  w-full  mx-auto  py-16 pt-0">
-      {/* Decorative Images */}
-      <div className="absolute left-0 top-0">
-        <div className="w-32 h-32 relative">
-          <div className="absolute inset-0">
-            <Image src={dic2} alt={''}/>
-            {/* <div className="w-24 h-24 bg-emerald-400 rounded-full" /> */}
-            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-6 bg-red-500 rounded-full transform rotate-45" style={{ background: '#ff6b6b' }} /> */}
-          </div>
-        </div>
+    <div className="relative w-full mx-auto py-20 overflow-hidden">
+      {/* Decorative SVGs */}
+      <div className="absolute left-0 top-0 hidden sm:block">
+        <Image src={dic2} alt="decor-left" className="w-24 h-auto" />
       </div>
-      
-      <div className="absolute right-0 top-0">
-        <div className="w-32 h-32 relative">
-          <div className="absolute inset-0">
-          <Image src={dic1} alt={''}/>
-            {/* <div className="w-24 h-24 bg-pink-400 rounded-full">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-1">
-                  {[...Array(6)].map((_, i) => (
-                    <div key={i} className="w-2 h-2 bg-yellow-300 rounded-full" />
-                  ))}
-                </div>
-              </div>
-            </div> */}
-            <div className="absolute top-1/2 right-0 w-12 h-16 border-r-2 border-black transform -rotate-45" />
-          </div>
-        </div>
+      <div className="absolute right-0 top-0 hidden sm:block">
+        <Image src={dic1} alt="decor-right" className="w-24 h-auto" />
       </div>
 
+      <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        {/* Main Heading */}
+        <motion.h2
+          className="text-[40px] sm:text-[48px] md:text-[56px] font-bold text-gray-900 leading-tight mb-8"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Everything you need to build your product,
+          <br className="hidden sm:block" />
+          all in one place.
+        </motion.h2>
 
-
-      <div className="max-w-3xl mx-auto text-center">
-        {/* <h1 className="text-5xl  text-black font-bold mb-8">
-          We didnt reinvent the wheel. Just design.
-        </h1> */}
-        {/* <h2 className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8">
-        We didnt reinvent the wheel. Just design.
-        </h2> */}
-
-<motion.h2
-  className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8"
-
-  transition={{ duration: 1, ease: "easeInOut" }}
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.5 }}
->
-  Every thing you need to build your product, all in one place.
-</motion.h2>
-
-
-
-
-
-
-<motion.div
-  className="text-[64px] leading-[60px] max-w-3xl mx-auto font-semibold mb-8"
-
-  transition={{ duration: 1, ease: "easeInOut" }}
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.5 }}
-
-
->
-
-<div className="text-xl leading-[10px] text-black mb-16 space-y-5">
+        {/* Subheading */}
+        <motion.div
+          className="text-lg sm:text-xl text-gray-700 mb-14 space-y-2"
+          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
           <p>Design as you know it is out the door.</p>
           <p>Design as you want it just arrived.</p>
+        </motion.div>
+
+        {/* Cards Section */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {steps.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <motion.div
+                key={i}
+                className="relative w-[250px] h-[250px] rounded-[32px] overflow-hidden shadow-lg flex flex-col justify-end text-left group"
+                transition={{ duration: 0.8, delay: i * 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${step.image})` }}
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition duration-300" />
+                {/* Content */}
+                <div className="relative z-10 p-4 text-white">
+                  <Icon size={40} strokeWidth={1.5} className="mb-3" />
+                  <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
+                  <p className="text-sm">{step.description}</p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
-</motion.div>
-
-
-
-
-<motion.div
-          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+        {/* CTA Button */}
+        <motion.div
+          className="mt-12"
+          transition={{ duration: 1, delay: 0.5 }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true }}
         >
-
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-      
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 bg-emerald-400 rounded-full flex items-center justify-center mb-4">
-      
-
-        <div className="w-12 h-8 bg-gray-300 triangle triangle-t" />
-
-          
-          
-        </div>
-        <h3 className="text-center text-black text-[26px] font-semibold">Design.</h3>
-        <p className="text-center text-black">Ensuring it is simple and easy to use.</p>
-      </div>
-
-  
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 bg-pink-400 rounded-full flex items-center justify-center mb-4">
-          <div className="w-12 h-8 bg-yellow-300 rounded" />
-        </div>
-
-        <h3 className="text-center text-black text-[26px] font-semibold">Build.</h3>
-        <p className="text-center text-black">Stable build with wrapping speed delivery</p>
-      </div>
-
-  
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 bg-blue-400 rounded-full flex items-center justify-center mb-4">
-          <div className="w-12 h-12 border-4 border-white rounded-full" />
-        </div>
-        <h3 className="text-center text-black text-[26px] font-semibold">Launch.</h3>
-        <p className="text-center text-black">Audience, beta users and iterate.</p>
-      </div>
-    </div>
-
-
-          </motion.div>
-
-
-
-
-          <motion.div
-          transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          
-        >
-
-
-      <Button>
-                Call: +91 9849000525
-              </Button>
-          </motion.div>
-
-
-
-
-         
-      
-
-
-        
-
+          <Button>Call: +91 9849000525</Button>
+        </motion.div>
       </div>
     </div>
   );
